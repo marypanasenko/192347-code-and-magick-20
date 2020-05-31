@@ -1,7 +1,5 @@
 'use strict';
 
-var canvas = document.getElementById('canvas');
-var ctx = canvas.getContext('2d');
 var CLOUD_WIDTH = 420;
 var CLOUD_HEIGHT = 270;
 var CLOUD_X = 100;
