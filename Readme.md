@@ -1,7 +1,7 @@
 # Учебный проект «Код и Магия» [![Build status][travis-image]][travis-url]
 
 * Студент: [Мария Панасенко](https://up.htmlacademy.ru/javascript/20/user/192347).
-* Наставник: [Федор Арбузов](https://htmlacademy.ru/profile/id593785).
+* Наставник: [Денис Байдаров](https://htmlacademy.ru/profile/4er).
 
 ---
 
