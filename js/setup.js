@@ -31,7 +31,7 @@ var onPopupEscPress = function (evt) {
 
 var userNameInput = document.querySelector('.setup-user-name');
 
-userNameInput.addEventListener('invalid', function (evt) {
+userNameInput.addEventListener('invalid', function () {
   if (userNameInput.validity.tooShort) {
     userNameInput.setCustomValidity('Имя должно состоять минимум из 2-х символов');
   } else if (userNameInput.validity.tooLong) {
@@ -43,7 +43,7 @@ userNameInput.addEventListener('invalid', function (evt) {
   }
 });
 
-userNameInput.addEventListener('input', function (evt) {
+userNameInput.addEventListener('input', function () {
   var valueLength = userNameInput.value.length;
 
   if (valueLength < MIN_NAME_LENGTH) {
