@@ -20,6 +20,7 @@
 
   var closePopup = function () {
     window.setup.classList.add('hidden');
+    resetPosition();
     document.removeEventListener('keydown', onPopupEscPress);
   };
   var resetPosition = function () {
@@ -38,13 +39,11 @@
 
   setupClose.addEventListener('click', function () {
     closePopup();
-    resetPosition();
   });
 
   setupClose.addEventListener('keydown', function (evt) {
     if (evt.key === 'Enter') {
       closePopup();
-      resetPosition();
     }
   });
 })();

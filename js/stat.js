@@ -38,7 +38,7 @@ var getMaxElement = function (arr) {
 
 
 window.renderStatistics = function (ctx, players, times) {
-  renderCloud(ctx, CLOUD_X + GAP, CLOUD_Y + GAP, 'rgba(0, 0, 0, 0.7)');
+   renderCloud(ctx, CLOUD_X + GAP, CLOUD_Y + GAP, 'rgba(0, 0, 0, 0.7)');
   renderCloud(ctx, CLOUD_X, CLOUD_Y, CLOUD_COLOUR);
   ctx.fillStyle = '#000';
   ctx.font = '16px PT Mono';
