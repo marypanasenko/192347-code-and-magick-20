@@ -6,11 +6,8 @@
   var StatusCode = {
     OK: 200
   };
-  var methodRequest = {
-    GET: 'GET',
-    POST: 'POST'
-  };
-  var makeRequest = function (method, url, data, onLoad, onError) {
+
+  var makeRequest = function (method, url, onLoad, onError, data) {
     var xhr = new XMLHttpRequest();
     xhr.responseType = 'json';
 
@@ -35,11 +32,11 @@
   };
 
   var save = function (data, onLoad, onError) {
-    makeRequest(methodRequest.POST, URL_SAVE, data, onLoad, onError);
+    makeRequest('POST', URL_SAVE, onLoad, onError, data);
   };
 
   var load = function (onLoad, onError) {
-    makeRequest(methodRequest.GET, URL_LOAD, null, onLoad, onError);
+    makeRequest('GET', URL_LOAD, onLoad, onError);
   };
 
   window.backend = {

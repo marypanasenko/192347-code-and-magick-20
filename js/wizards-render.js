@@ -17,9 +17,9 @@
   };
   var successHandler = function (wizards) {
     var fragment = document.createDocumentFragment();
-
+    var shuffledWizards = window.util.shuffleArray(wizards);
     for (var i = 0; i < AMOUNT_OF_WIZARD; i++) {
-      fragment.appendChild(renderWizard(wizards[i]));
+      fragment.appendChild(renderWizard(shuffledWizards[i]));
     }
     similarListElement.appendChild(fragment);
 
