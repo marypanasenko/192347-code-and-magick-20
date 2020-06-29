@@ -136,18 +136,18 @@
     wizard.onEyesChange(window.wizardColorize.eyesColorInput.value);
   });
 
-  wizard.onEyesChange = function (color) {
+  wizard.onEyesChange = window.util.debounce(function (color) {
     eyesColor = color;
     updateWizards();
-  };
+  });
 
-  wizard.onCoatChange = function (color) {
+  wizard.onCoatChange = window.util.debounce(function (color) {
     coatColor = color;
     updateWizards();
-  };
-  wizard.onFireballColor = function (color) {
+  });
+  wizard.onFireballColor = window.util.debounce(function (color) {
     fireballColor = color;
     updateWizards();
-  };
+  });
   window.backend.load(successHandler, errorHandler);
 })();
