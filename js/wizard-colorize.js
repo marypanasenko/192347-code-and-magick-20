@@ -13,7 +13,6 @@
     COAT_COLOR: ['rgb(101, 137, 164)', 'rgb(241, 43, 107)', 'rgb(146, 100, 161)', 'rgb(56, 159, 117)', 'rgb(215, 210, 55)', 'rgb(0, 0, 0)'],
     EYES_COLOR: ['black', 'red', 'blue', 'yellow', 'green']
   };
-
   var wizzardClickHandler = function (inputElement, element, colorArray, styleProperty) {
     element.addEventListener('click', function () {
       var color = colorArray[window.util.getRandomInt(0, colorArray.length)];
@@ -24,4 +23,12 @@
   wizzardClickHandler(fireballColorInput, setupFireballWrap, FIREBALL_COLOR, 'backgroundColor');
   wizzardClickHandler(coatColorInput, wizardCoat, wizardsRender.COAT_COLOR, 'fill');
   wizzardClickHandler(eyesColorInput, wizardEyes, wizardsRender.EYES_COLOR, 'fill');
+  window.wizardColorize = {
+    wizardCoat: wizardCoat,
+    wizardEyes: wizardEyes,
+    setupFireballWrap: setupFireballWrap,
+    fireballColorInput: fireballColorInput,
+    eyesColorInput: eyesColorInput,
+    coatColorInput: coatColorInput
+  };
 })();
